@@ -23,11 +23,7 @@ class EmpleadoController extends Controller
      */
     public function create()
     {
-        $empleado=new User(); 
-        $empleado->name=$request->input('fecha_entrega');
-        $empleado->email=$request->input('editoria');
-        $empleado->oficio=$request->input('año');
-        $empleado->save();
+        //
     }
 
     /**
@@ -38,7 +34,11 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $empleado=new User(); 
+        $empleado->name=$request->input('fecha_entrega');
+        $empleado->email=$request->input('editoria');
+        $empleado->oficio=$request->input('año');
+        $empleado->save();
     }
 
     /**
@@ -60,11 +60,7 @@ class EmpleadoController extends Controller
      */
     public function edit($id)
     {
-        $empleado->fill($request->input('$id'));
-        $empleado->name=$request->input('fecha_entrega');
-        $empleado->email=$request->input('editoria');
-        $empleado->oficio=$request->input('año');
-        $empleado->save();
+        //
     }
 
     /**
@@ -74,9 +70,13 @@ class EmpleadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,User $id)
     {
-        //
+        $empleado->fill($request->input('$id'));
+        $empleado->name=$request->input('fecha_entrega');
+        $empleado->email=$request->input('editoria');
+        $empleado->oficio=$request->input('año');
+        $empleado->save();
     }
 
     /**

@@ -23,16 +23,7 @@ class LibroController extends Controller
      */
     public function create()
     {
-        $libro=new Libro();        
-        $libro->name=$request->input('fecha_entrega');
-        $libro->editoria=$request->input('editoria');
-        $libro->año=$request->input('año');
-        $libro->biblioteca=$request->input('biblioteca');     
-        $libro->autor=$request->input('autor');
-        $libro->tipo=$request->input('tipo');
-        $libro->area=$request->input('area');
-        $libro->dia=$request->input('dia');
-        $libro->save();
+        //
     }
 
     /**
@@ -43,7 +34,16 @@ class LibroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $libro=new Libro();        
+        $libro->name=$request->input('fecha_entrega');
+        $libro->editoria=$request->input('editoria');
+        $libro->año=$request->input('año');
+        $libro->biblioteca=$request->input('biblioteca');     
+        $libro->autor=$request->input('autor');
+        $libro->tipo=$request->input('tipo');
+        $libro->area=$request->input('area');
+        $libro->dia=$request->input('dia');
+        $libro->save();
     }
 
     /**
@@ -75,7 +75,7 @@ class LibroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Libro $id)
     {        
         $libro->fill($request->input('$id'));
         $libro->name=$request->input('fecha_entrega');

@@ -23,11 +23,7 @@ class EstudianteController extends Controller
      */
     public function create()
     {
-        $estudiante=new User(); 
-        $estudiante->name=$request->input('fecha_entrega');
-        $estudiante->email=$request->input('editoria');
-        $estudiante->oficio=$request->input('año');
-        $estudiante->save();
+        //
     }
 
     /**
@@ -38,7 +34,11 @@ class EstudianteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $estudiante=new User(); 
+        $estudiante->name=$request->input('fecha_entrega');
+        $estudiante->email=$request->input('editoria');
+        $estudiante->oficio=$request->input('año');
+        $estudiante->save();
     }
 
     /**
@@ -60,11 +60,7 @@ class EstudianteController extends Controller
      */
     public function edit($id)
     {
-        $estudiante->fill($request->input('$id'));
-        $estudiante->name=$request->input('fecha_entrega');
-        $estudiante->email=$request->input('editoria');
-        $estudiante->oficio=$request->input('año');
-        $estudiante->save();
+        //
     }
 
     /**
@@ -74,9 +70,13 @@ class EstudianteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,User $id)
     {
-        //
+        $estudiante->fill($request->input('$id'));
+        $estudiante->name=$request->input('fecha_entrega');
+        $estudiante->email=$request->input('editoria');
+        $estudiante->oficio=$request->input('año');
+        $estudiante->save();
     }
 
     /**

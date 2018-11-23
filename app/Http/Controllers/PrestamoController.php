@@ -71,7 +71,7 @@ class PrestamoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Prestamo $id)
     {
         $prestamo->fill($request->input('$id'));        
         $prestamo->fecha_entrega=$request->input('fecha_entrega');

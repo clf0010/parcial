@@ -85,9 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">Algo</a>
-                    <a href="#">Sea</a>
-                    <a href="#">Dios</a>
+                    <a href="#">Libros</a>
                 </div>
             </div>
         
